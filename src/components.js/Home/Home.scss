@@ -1,0 +1,200 @@
+.home-page{
+    .text-zone{
+        position: absolute;
+        left:10%;
+        top:50%;
+        transform: translateY(-50%);
+        width: 60%;
+        max-height: 90%;
+    }
+    h1{
+        color: white;
+        font-size: 53px;
+        margin: 0;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+
+        &::before{
+            content: '<h1>';
+            font-family: 'La Belle Aurore';
+            color: #ffd700;
+            font-size: 18px;
+            position: absolute;
+            margin-top: -40px;
+            left: 15px; 
+            opacity: 0.6;
+        }
+
+        &::after{
+            content: '</h1>';
+            font-family: 'La Belle Aurore';
+            color: #ffd700;
+            font-size: 18px;
+            position: absolute;
+            margin-top: 18px;
+            margin-left: 20px;
+            animation: fadeIn 1s 1.7s backwards;
+            opacity: 0.6;
+        }
+
+        img{
+            width: 44px;
+            margin-left: 20px;
+            opacity: 0;
+            height: auto;
+            animation: rotateIn 1s linear both;
+        }
+    }
+    h2{
+        color: #8d8d8d;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 11px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        animation: fadeIn 1s 1.8s backwards;
+    }
+    .flat-button{
+        color: #ffd700;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 4px;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid #ffd700;
+        margin-top: 25px;
+        float:left; 
+        animation: fadeIn 1s 1.8s backwards;
+        white-space: nowrap;
+
+        &:hover{
+            background: #ffd700;
+            color: #333;
+        }
+    }
+}
+
+.card{
+        position: relative;
+        float: right;
+        left:30%;
+        transform: translateY(-130%);
+        max-height: 200px;
+        max-width: 300px;
+        border: 3px solid #ffd700;
+        box-shadow: 5px 7px #181818; 
+        border-radius: 2%;
+        animation: fadeIn 5s 3s backwards;
+}
+.eu{
+    max-height: 200px;
+    max-width: 300px;  
+    // animation: fadeIn 5s;
+    // -webkit-animation: fadeIn 5s;
+    // -moz-animation: fadeIn 5s;
+    // -o-animation: fadeIn 5s;
+    // -ms-animation: fadeIn 5s;   
+        
+    &:hover {
+        animation: fadeIn 2s;
+        max-height: 200px;
+        max-width: 300px;  
+        content: url('../../assets/images/logo-alt.jpg');
+        opacity: 0;
+    }
+
+    &::after{
+        animation: fadeIn 2s;
+    }
+}
+
+.tagImg{
+    color: #ffd700;
+    opacity: 0.6;
+    position: relative;
+    float: right;
+    left:10%;
+    transform: translateY(180%);
+    bottom: 30;
+    top:-80px;
+    left:100px; 
+    font-size: 18px;
+    font-family: 'La Belle Aurore';
+}
+
+// }
+
+@media (max-width: 530px){
+    .home-page{
+        .text-zone{
+            position: relative;
+            display: block;
+            transform: translateY(-85%);
+            max-height: 50%;
+            width: 84%;
+            left: 5%;
+        }
+        h1{
+            position: relative;
+            display: block;
+            left: 10px;
+
+            img{
+                width: 44px;
+                margin-left: 10px;
+                opacity: 0;
+                height: auto;
+            }
+            &::before{
+                content: '<h1>';
+                font-family: 'La Belle Aurore';
+                color: #ffd700;
+                font-size: 18px;
+                position: absolute;
+                margin-top: 40px;
+                left: 15px; 
+                opacity: 0.6;
+            }
+    
+            &::after{
+                content: '</h1>';
+                font-family: 'La Belle Aurore';
+                color: #ffd700;
+                font-size: 18px;
+                position: absolute;
+                margin-top: 18px;
+                margin-left: 20px;
+                animation: fadeIn 1s 1.7s backwards;
+                opacity: 0.6;
+            }
+        }
+        .flat-button{
+            margin-top: 245px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 530px){
+    .card{
+        position: relative;
+        display: block;
+        transform: translateY(10%) translateX(-90%);
+        
+    }
+    .tagImg{
+        color: #ffd700;
+        opacity: 0.6;
+        position: relative;
+        float: left;
+        left:10%;
+        // transform: translateY(40%);
+        bottom: 30;
+        top:290px;
+        left:5px; 
+        font-size: 18px;
+        font-family: 'La Belle Aurore';
+    }
+}
+
